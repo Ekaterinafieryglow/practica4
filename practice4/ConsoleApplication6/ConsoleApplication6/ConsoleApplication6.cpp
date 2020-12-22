@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <ctime>
 #include <random>
@@ -19,15 +19,15 @@ int main()
 	cout << "Введите количество бочек в мешке: ";
 	cin >> N;
 
-	while (i <= N) 
+	while (i <= N)  //проверка границ перебора от 1 до N
 	{
 		cout << "Нажмите любую клавишу, чтобы вытянуть бочонок: ";
 		cin >> cry;
-		do 
+		do         //проверка рандомного числа на выпадение 1 раз
 		{
 			number = rand() % N;
 		} while (find(a.begin(), a.end(), number) != a.end());
-		a.push_back(number);
+		a.push_back(number);    //добавление числа в вектор
 		cout << "Число на бочонке: " << number + 1 << endl;
 		i++;
 	}
